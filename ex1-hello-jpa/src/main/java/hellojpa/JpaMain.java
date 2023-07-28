@@ -16,11 +16,11 @@ public class JpaMain {
         tx.begin();
 
 
-        /*등록
+//        등록
         try {
             Member member = new Member();
-            member.setId(2L);
-            member.setName("HelloB");
+            member.setId(3L);
+            member.setName("HelloC");
 
             em.persist(member);
 
@@ -29,10 +29,10 @@ public class JpaMain {
             tx.rollback();
         } finally {
             em.close();
-        }*/
+        }
 
 
-        /*수정
+/*//        수정
         try {
             Member findMember = em.find(Member.class, 1L);
             findMember.setName("Member1");
@@ -45,7 +45,7 @@ public class JpaMain {
         }*/
 
 
-/*        삭제
+/*//        삭제
         try {
 
             Member findMember = em.find(Member.class, 1L);
@@ -59,5 +59,6 @@ public class JpaMain {
         }
 
         emf.close();*/
+
     }
 }
