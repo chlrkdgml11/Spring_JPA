@@ -19,7 +19,6 @@ public class JpaMain {
 //        등록
         try {
             Member member = new Member();
-            member.setId(4L);
             member.setUsername("HelloD");
 
             em.persist(member);
