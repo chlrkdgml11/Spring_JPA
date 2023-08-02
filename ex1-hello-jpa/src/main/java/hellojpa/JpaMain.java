@@ -19,8 +19,8 @@ public class JpaMain {
 //        등록
         try {
             Member member = new Member();
-            member.setId(3L);
-            member.setName("HelloC");
+            member.setId(4L);
+            member.setUsername("HelloD");
 
             em.persist(member);
 
@@ -56,9 +56,9 @@ public class JpaMain {
             tx.rollback();
         } finally {
             em.close();
-        }
+        }*/
 
-        emf.close();*/
+        emf.close();
 
     }
 }
