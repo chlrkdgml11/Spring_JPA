@@ -1,4 +1,4 @@
-package hellojpa;
+package hellojpa.Domain;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
-    List<Member> members = new ArrayList<>();
+    private List<Member> members = new ArrayList<>();
 
     public Long getId() {
         return id;

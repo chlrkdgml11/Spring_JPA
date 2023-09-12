@@ -1,5 +1,7 @@
 package hellojpa;
 
+import hellojpa.Domain.Member;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -16,8 +18,23 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
+        try {
 
-//        등록
+            Member member = new Member();
+
+            member.setUsername("asd");
+
+            em.persist(member);
+
+            tx.commit();
+        } catch (Exception e) {
+            tx.rollback();
+        } finally {
+            em.close();
+        }
+
+
+/*//        등록
         try {
             Team team = new Team();
             team.setName("Team1");
@@ -55,7 +72,7 @@ public class JpaMain {
             tx.rollback();
         } finally {
             em.close();
-        }
+        }*/
 
 
 /*//        수정
