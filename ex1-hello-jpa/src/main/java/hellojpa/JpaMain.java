@@ -1,5 +1,6 @@
 package hellojpa;
 
+import hellojpa.Domain.Address;
 import hellojpa.Domain.Member;
 
 import javax.persistence.EntityManager;
@@ -20,11 +21,6 @@ public class JpaMain {
 
         try {
 
-            Member member = new Member();
-
-            member.setUsername("asd");
-
-            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
